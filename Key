@@ -25,6 +25,10 @@ local users = {
     ["Player20"] = { senha = "senha20", expira = os.time({year=2025, month=8, day=3, hour=23, min=59, sec=59}) },
 }
 
+-- 🎨 Cores para facilitar
+local corSucesso = Color3.fromRGB(100, 255, 100)
+local corErro = Color3.fromRGB(255, 80, 80)
+
 -- 🖥️ Interface (GUI)
 local playerGui = player:WaitForChild("PlayerGui")
 local gui = Instance.new("ScreenGui")
@@ -78,7 +82,7 @@ resultLabel.Size = UDim2.new(1, 0, 0, 21)
 resultLabel.Position = UDim2.new(0, 0, 1, -23)
 resultLabel.BackgroundTransparency = 1
 resultLabel.Text = ""
-resultLabel.TextColor3 = Color3.fromRGB(255, 80, 80)
+resultLabel.TextColor3 = corErro
 resultLabel.Font = Enum.Font.Gotham
 resultLabel.TextSize = 16
 resultLabel.Parent = frame
@@ -94,21 +98,22 @@ verifyBtn.MouseButton1Click:Connect(function()
             if os.time() <= usuario.expira then
                 local segundosRestantes = usuario.expira - os.time()
                 local diasRestantes = math.floor(segundosRestantes / (24 * 60 * 60))
-                resultLabel.TextColor3 = Color3.fromRGB(100, 255, 100) -- Verde para sucesso
+                resultLabel.TextColor3 = corSucesso
                 resultLabel.Text = "Acesso liberado! Dias restantes: " .. diasRestantes
                 wait(1.5)
                 gui:Destroy()
-             loadstring(game:HttpGet("https://raw.githubusercontent.com/Gabs07802/Menu-p-blico-/main/Menu.lua"))()              print("Executando script secreto...")
+                -- Executa o script secreto:
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/Gabs07802/Menu-p-blico-/main/Menu.lua"))()
             else
-                resultLabel.TextColor3 = Color3.fromRGB(255, 80, 80)
+                resultLabel.TextColor3 = corErro
                 resultLabel.Text = "Sua licença expirou."
             end
         else
-            resultLabel.TextColor3 = Color3.fromRGB(255, 80, 80)
+            resultLabel.TextColor3 = corErro
             resultLabel.Text = "Senha incorreta!"
         end
     else
-        resultLabel.TextColor3 = Color3.fromRGB(255, 80, 80)
+        resultLabel.TextColor3 = corErro
         resultLabel.Text = "Usuário não autorizado!"
     end
 end)
