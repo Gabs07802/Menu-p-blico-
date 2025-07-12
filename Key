@@ -98,8 +98,7 @@ verifyBtn.MouseButton1Click:Connect(function()
                 resultLabel.Text = "Acesso liberado! Dias restantes: " .. diasRestantes
                 wait(1.5)
                 gui:Destroy()
-            loadstring(game:HttpGet("loadstring(game:HttpGet("https://raw.githubusercontent.com/Gabs07802/SAVE/main/Menu%20incurtado?token=GHSAT0AAAAAADG2EL6CAU3SAHO3TTU72Y6U2DR4EBQ"))()"))()   -- Coloque seu script aqui (APÓS AUTORIZAÇÃO)
-                print("Executando script secreto...")
+            loadstring(game:HttpGet("loadstring(game:HttpGet("https://raw.githubusercontent.com/Gabs07802/Menu-p-blico-/main/Menu.lua"))()  -                print("Executando script secreto...")
             else
                 resultLabel.TextColor3 = Color3.fromRGB(255, 80, 80)
                 resultLabel.Text = "Sua licença expirou."
