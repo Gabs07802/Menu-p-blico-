@@ -197,13 +197,12 @@ local tabContents = {
     {
         section = "AUTO FARME",
         buttons = {
-            -- Primeira linha: dois botões lado a lado com espaço moderado (~0.22 do buttonWidth)
             {type="row", buttons={
                 {type="toggle", label="AUTO IFOOD", key="autoifood"},
-                {type="toggle", label="AUTO MINA", key="automina"}
+                {type="toggle", label="AUTO ROTA", key="autorota"}
             }},
             {type="toggle", label="AUTO POSTE",         key="autoposte"},
-            {type="toggle", label="AUTO FZ",            key="autofz"},
+            {type="toggle", label="AUTO MINA",          key="automina"}, -- Alterado aqui!
             {type="toggle", label="AUTO ELETRICA",      key="autoelet"},
             {type="toggle", label="AUTO IMPILHADEIRA",  key="autoimpilhadeira"},
             {type="toggle", label="AUTO LENHADOR",      key="autolenhador"},
@@ -436,11 +435,11 @@ local function createToggle(parent, labelText, toggleKey)
                 loadstring(game:HttpGet("LINK_DO_farme_poste_OFF.lua"))()
             end
         end
-        if toggleKey == "autofz" then
+        if toggleKey == "automina" then -- Alterado aqui!
             if state then
-                loadstring(game:HttpGet("LINK_DO_farme_fz_ON.lua"))()
+                loadstring(game:HttpGet("LINK_DO_farme_mina_ON.lua"))()
             else
-                loadstring(game:HttpGet("LINK_DO_farme_fz_OFF.lua"))()
+                loadstring(game:HttpGet("LINK_DO_farme_mina_OFF.lua"))()
             end
         end
         if toggleKey == "autoelet" then
@@ -464,11 +463,11 @@ local function createToggle(parent, labelText, toggleKey)
                 loadstring(game:HttpGet("LINK_DO_farme_lenhador_OFF.lua"))()
             end
         end
-        if toggleKey == "automina" then
+        if toggleKey == "autorota" then
             if state then
-                loadstring(game:HttpGet("LINK_DO_farme_mina_ON.lua"))()
+                loadstring(game:HttpGet("LINK_DO_farme_rota_ON.lua"))() -- Coloque o link correto aqui
             else
-                loadstring(game:HttpGet("LINK_DO_farme_mina_OFF.lua"))()
+                loadstring(game:HttpGet("LINK_DO_farme_rota_OFF.lua"))() -- Coloque o link correto aqui
             end
         end
     end) 
