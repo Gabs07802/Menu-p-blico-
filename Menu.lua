@@ -375,9 +375,9 @@ local function createToggle(parent, labelText, toggleKey)
         end
         if toggleKey == "ghostmod" then
             if state then
-                loadstring(game:"https://raw.githubusercontent.com/Gabs07802/Scripts-/main/Ghost_on.lua"))()
+                loadstring(game:HttpGet("LINK_DO_GHOSTMOD_ON.lua"))()
             else
-                loadstring(game:"https://raw.githubusercontent.com/Gabs07802/Scripts-/main/Ghost_off.lua"))()
+                loadstring(game:HttpGet("LINK_DO_GHOSTMOD_OFF.lua"))()
             end
         end
         if toggleKey == "speedcar" then
