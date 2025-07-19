@@ -368,23 +368,23 @@ local function createToggle(parent, labelText, toggleKey)
         end
         if toggleKey == "speedplayer" then
             if state then
-                loadstring(game:HttpGet("LINK_DO_SPEEDPLAYER_ON.lua"))()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/Gabs07802/Scripts-/main/Speedcar_on.lia"))()
             else
-                loadstring(game:HttpGet("LINK_DO_SPEEDPLAYER_OFF.lua"))()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/Gabs07802/Scripts-/main/Speedcar_off.lua"))()
             end
         end
         if toggleKey == "ghostmod" then
             if state then
-                loadstring(game:HttpGet("LINK_DO_GHOSTMOD_ON.lua"))()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/Gabs07802/Scripts-/main/Ghost_on.lua"))()
             else
-                loadstring(game:HttpGet("LINK_DO_GHOSTMOD_OFF.lua"))()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/Gabs07802/Scripts-/main/Ghost_off.lua"))()
             end
         end
         if toggleKey == "speedcar" then
             if state then
-                loadstring(game:HttpGet("LINK_DO_SPEEDCAR_ON.lua"))()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/Gabs07802/Scripts-/main/Speedcar_on.lia"))()
             else
-                loadstring(game:HttpGet("LINK_DO_SPEEDCAR_OFF.lua"))()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/Gabs07802/Scripts-/main/Speedcar_off.lua"))()
             end
         end
         if toggleKey == "revive" then
