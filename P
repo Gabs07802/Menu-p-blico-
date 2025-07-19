@@ -152,7 +152,6 @@ tabContainer.Size = UDim2.new(1, -sidebarWidth, 1, -titleBarHeight)
 tabContainer.BackgroundTransparency = 1
 tabContainer.Parent = menu 
 
--- ATENÇÃO: AQUI está a alteração, AUTO ROTA embaixo de AUTO MINA!
 local tabContents = {
 ["PLAYER"] = {
     {
@@ -202,7 +201,7 @@ local tabContents = {
                 {type="toggle", label="AUTO IFOOD", key="autoifood"},
                 {type="toggle", label="AUTO MINA", key="automina"}
             }},
-            {type="toggle", label="AUTO ROTA", key="autorota"},
+            {type="toggle", label="AUTO ROTA", key="autorota"}, -- SEGUNDA FILEIRA, logo abaixo de AUTO MINA!
             {type="toggle", label="AUTO POSTE",         key="autoposte"},
             {type="toggle", label="AUTO FZ",            key="autofz"},
             {type="toggle", label="AUTO ELETRICA",      key="autoelet"},
@@ -217,7 +216,7 @@ local tabContents = {
         {type="toggle", label="Night Vision", key="nightvision"}
     }}
 }
-}
+} 
 
 local toggleStates = {} 
 
