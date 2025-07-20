@@ -465,9 +465,9 @@ local function createToggle(parent, labelText, toggleKey)
         end
         if toggleKey == "autorota" then
             if state then
-                loadstring(game:HttpGet("LINK_DO_farme_rota_ON.lua"))() -- Coloque o link correto aqui
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/Gabs07802/AUTO-FARMS/main/AutoErva_on.lua"))() -- Coloque o link correto aqui
             else
-                loadstring(game:HttpGet("LINK_DO_farme_rota_OFF.lua"))() -- Coloque o link correto aqui
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/Gabs07802/AUTO-FARMS/main/AutoErva_off.lua"))() -- Coloque o link correto aqui
             end
         end
     end) 
